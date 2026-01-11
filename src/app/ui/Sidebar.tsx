@@ -12,14 +12,14 @@ export default function Sidebar({ sidebarOpened, setSidebarOpened }: { sidebarOp
   return (
     <>
       {/* Backdrop */}
-      <div className={`fixed inset-0 bg-black/60 z-90 backdrop-blur-sm transition-opacity duration-300 ${sidebarOpened ? "opacity-100" : "opacity-0"}`}></div>
+      <div className={`fixed inset-0 bg-black/60 z-90 backdrop-blur-sm transition-opacity duration-300 ${sidebarOpened ? "opacity-100`visible" : "opacity-0 invisible"}`}></div>
       <nav className={`fixed right-0 w-full bg-white sm:max-w-sm z-110 transform transition-all duration-300 ease-in-out ${sidebarOpened
         ? "translate-x-0 opacity-100" // Estado Abierto
         : "translate-x-full opacity-0" // Estado Cerrado (Fuera a la derecha)
         }`}>
         <div className="w-full flex flex-col items-end p-5">
           <section className="w-full border-b border-[#CCCCCC]">
-            <div className="flex gap-3 justify-end text-sm cursor-pointer" onClick={close}>
+            <div className="flex gap-3 justify-end text-sm cursor-pointer items-center" onClick={close}>
               <p>Cerrar</p>
               <Image src={"/assets/close.svg"} alt="Cerrar menú" width={15} height={15} />
             </div>
