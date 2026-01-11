@@ -4,12 +4,10 @@ import { useState } from "react";
 import Sidebar from "./Sidebar";
 
 export default function Navbar() {
-  const [menuOpened, setMenuOpened] = useState(false)
+  const [sidebarOpened, setSidebarOpened] = useState(false)
 
   const toggleMenu = () => {
-    setMenuOpened(!menuOpened)
-    console.log(menuOpened);
-
+    setSidebarOpened(!sidebarOpened)
   }
 
   return (
@@ -23,11 +21,12 @@ export default function Navbar() {
           </div>
         </div>
         <div className="flex items-center gap-5">
-          <div className="hidden sm:block">Menú</div>
+          {!sidebarOpened && <div className="hidden sm:block">Menú</div>}
+
           <Image className="cursor-pointer" src={"/assets/hmbg-menu.svg"} alt="Menú hamburguesa" width={25} height={18} onClick={toggleMenu} />
         </div>
       </header>
-      {menuOpened && <Sidebar onClose={() => setMenuOpened(false)} />}
+      <Sidebar sidebarOpened={sidebarOpened} setSidebarOpened={setSidebarOpened} />
     </>
   );
 }
