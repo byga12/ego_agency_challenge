@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import Sidebar from "./Sidebar";
-
+import Link from "next/link";
 export default function Navbar() {
   const [sidebarOpened, setSidebarOpened] = useState(false)
 
@@ -16,7 +16,7 @@ export default function Navbar() {
         <div className="flex items-center gap-16">
           <Image src={"/assets/ego-design-logo.svg"} alt="Logo EGO" width={38} height={40} />
           <div className="gap-10 font-semibold hidden sm:flex">
-            <div>Modelos</div>
+            <Link href={"/"}>Modelos</Link>
             <div>Ficha de modelo</div>
           </div>
         </div>

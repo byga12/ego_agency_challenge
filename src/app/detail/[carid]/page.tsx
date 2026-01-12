@@ -1,5 +1,5 @@
-import { getCarById } from "../lib/ego-design-service";
-import { CarDetail } from "../types/cars";
+import { getCarById } from "../../lib/ego-design-service";
+import { CarDetail } from "../../types/cars";
 import Image from "next/image";
 
 const isOdd = (num: number) => {

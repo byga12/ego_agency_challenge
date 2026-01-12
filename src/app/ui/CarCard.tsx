@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function CarCard({ car }: { car: CarMin }) {
   const router = useRouter();
   const viewDetail = (car: CarMin) => {
-    router.push(`/${car.id}`)
+    router.push(`/detail/${car.id}`)
   }
 
   const isMobileScreen = (): boolean => {

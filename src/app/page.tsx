@@ -11,11 +11,10 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ s
   const initialCars: CarMin[] = await getCars(segment, ordering)
 
   return (
-    <main className="p-5 flex flex-col gap-5">
+    <main className="p-5 flex flex-col gap-5 sm:w-[80%] sm:m-auto">
 
       {/* Título */}
       <h1 className="font-semibold text-4xl py-3">Descubrí todos los modelos</h1>
-
       {/* Barra de filtros y orden */}
       <CarFilters segment={segment} ordering={ordering} />
 
