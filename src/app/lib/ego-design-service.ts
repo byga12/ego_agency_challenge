@@ -2,8 +2,10 @@ import { CarDetail, CarMin } from "../types/cars";
 
 const API_URL = process.env.API_URL
 
-export const getCars = async (): Promise<CarMin[]> => {
-    const res = await fetch(`${API_URL}/models`)
+export const getCars = async (segment:string="", ordering:string=""): Promise<CarMin[]> => {
+    const params = new URLSearchParams({segment, ordering})
+    
+    const res = await fetch(`${API_URL}/models/?${params.toString()}`)
     if (!res.ok) {
         throw new Error(`Error al obtener modelos: ${res.statusText}`);
     }
