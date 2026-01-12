@@ -1,10 +1,11 @@
+import { useRouter } from "next/navigation";
 import { CarMin } from "../types/cars";
 import Image from "next/image";
 
 export default function CarCard({ car }: { car: CarMin }) {
-
+  const router = useRouter();
   const viewDetail = (car: CarMin) => {
-    console.log("Detalle de modelo:", car.name);
+    router.push(`/${car.id}`)
   }
 
   const isMobileScreen = (): boolean => {
