@@ -14,7 +14,9 @@ export default function Navbar() {
     <>
       <header className="sticky top-0  z-100 bg-white w-full flex justify-between items-center px-8 py-5 border-b border-[#CCCCCC]">
         <div className="flex items-center gap-16">
-          <Image src={"/assets/ego-design-logo.svg"} alt="Logo EGO" width={38} height={40} />
+          <Link href={"/"}>
+            <Image src={"/assets/ego-design-logo.svg"} alt="Logo EGO" width={38} height={40} />
+          </Link>
           <div className="gap-10 font-semibold hidden sm:flex">
             <Link href={"/"}>Modelos</Link>
             <div>Ficha de modelo</div>
