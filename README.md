@@ -16,7 +16,8 @@ Challenge técnico para postulación a puesto de Frontend Developer
 Ejecutar en bash o Powershell:
 - $ git clone https://github.com/byga12/ego_agency_challenge
 - $ cd ego_agency_challenge
-- $ npm i 
+- $ npm i
+En este punto, crear un archivo .env en la raíz del proyecto. Con una variable de entorno "API_URL" cuyo valor será la URL a la API de EGO
 - $ npm run build
 - $ npm run start
 Por defecto, el servidor se levanta en http://localhost:3000
