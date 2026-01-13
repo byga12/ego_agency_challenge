@@ -3,7 +3,10 @@ import Image from "next/image";
 import { useState } from "react";
 import Sidebar from "./Sidebar";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 export default function Navbar() {
+  const pathname = usePathname()
   const [sidebarOpened, setSidebarOpened] = useState(false)
 
   const toggleMenu = () => {
@@ -18,8 +21,8 @@ export default function Navbar() {
             <Image src={"/assets/ego-design-logo.svg"} alt="Logo EGO" width={38} height={40} />
           </Link>
           <div className="gap-10 font-semibold hidden sm:flex">
-            <Link href={"/"}>Modelos</Link>
-            <div>Ficha de modelo</div>
+            <Link href={"/"} className={pathname === "/" ? "text-[#D0021B] underline underline-offset-30 decoration-4" : ""}>Modelos</Link>
+            <div className={pathname.includes("/detail/") ? "text-[#D0021B] underline underline-offset-30 decoration-4" : ""}>Ficha de modelo</div>
           </div>
         </div>
         <div className="flex items-center gap-5">

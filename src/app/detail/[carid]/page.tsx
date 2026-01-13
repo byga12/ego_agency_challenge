@@ -13,7 +13,7 @@ export default async function Page({ params }: { params: Promise<{ carid: string
   const car: CarDetail = await getCarById(Number(carid))
 
   return (
-    <main className=" py-10 flex flex-col gap-5">
+    <main className=" py-10 sm:pb-[100] flex flex-col gap-5">
       {/* Hero */}
       <section className="w-[90%] m-auto sm:w-[%80] lg:w-[70%] flex flex-col justify-center items-center sm:gap-5 sm:grid sm:grid-cols-2">
         <Image className="self-center w-full" src={car.photo} alt="Foto principal del auto" width={0} height={0} sizes="100vw" />

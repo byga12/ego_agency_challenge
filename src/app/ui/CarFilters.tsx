@@ -93,7 +93,7 @@ export default function CarFilters({ segment, ordering }: { segment: string, ord
     <section className="flex py-3 justify-between text-sm text-[#373737] items-center border-b border-[#CCCCCC]">
 
       {/* Filtrar por */}
-      <Menu as="div" className="relative rounded-sm drop-shadow-sm md:hidden">
+      <Menu as="div" className="relative rounded-sm drop-shadow-sm xl:hidden">
         <MenuButton className="group flex items-center justify-between gap-2 cursor-pointer text-sm">
           <p className="font-semibold">Filtrar por</p>
           <ChevronDownIcon aria-hidden="true" className="size-5 group-ui-open:duration-100 group-ui-open:rotate-180" />
@@ -111,7 +111,7 @@ export default function CarFilters({ segment, ordering }: { segment: string, ord
           )}
         </MenuItems>
       </Menu>
-      <div className="hidden items-center md:flex gap-14 ">
+      <div className="hidden items-center xl:flex gap-14 ">
         <h2 className="font-semibold">Filtrar por</h2>
         <ul className="flex items-center gap-12">
           {segmentsList.map(segment =>
