@@ -14,11 +14,11 @@ Challenge técnico para postulación a puesto de Frontend Developer
 
 # Para levantar en local
 Ejecutar en bash o Powershell:
-$ git clone https://github.com/byga12/ego_agency_challenge
-$ cd ego_agency_challenge
-$ npm i 
-$ npm run build
-$ npm run start
+- $ git clone https://github.com/byga12/ego_agency_challenge
+- $ cd ego_agency_challenge
+- $ npm i 
+- $ npm run build
+- $ npm run start
 Por defecto, el servidor se levanta en http://localhost:3000
 
 # Consideraciones
